@@ -1,18 +1,22 @@
 function calculate() {
-    let number1 = document.getElementById("nr1").value;
-    let number2 = document.getElementById("nr2").value;
+    let number1 = parseInt(document.getElementById("nr1").value);
+    let number2 = parseInt(document.getElementById("nr2").value);
     let operator = document.getElementById("calc").value;
     let result;
     if (operator == '+') {
         result = number1 + number2;
-    } else if (operator == '-') {
+    } 
+    else if (operator == '-') {
         result = number1 - number2;
-    } else if (operator == '*') {
+    } 
+    else if (operator == '*') {
         result = number1 * number2;
-    } else if (operator == '/') {
+    } 
+    else if (operator == '/') {
         result = number1 / number2;
-    } else {
-        result = "n/a";
+    }
+    if (result == 'NaN' || result == '+Infinity' || result == '-Infinity') {
+        result = 'n/a'
     }
     document.getElementById("result").innerHTML = result;
 }

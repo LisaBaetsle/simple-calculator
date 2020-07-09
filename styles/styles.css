@@ -43,3 +43,7 @@ input {
     font-size: 24px;
     color: grey;
 }
+
+label {
+    display: none;;
+}
